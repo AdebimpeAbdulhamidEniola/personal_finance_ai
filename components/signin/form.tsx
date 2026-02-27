@@ -24,50 +24,62 @@ export const LogInForm = () =>{
     } 
 
     return (
-        <div className="space-y-6">
-        <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                    control={form.control}
-                    name="email"
-                    render={({field}) => (
-                        <FormItem>
-                            <FormLabel>Email</FormLabel>
-                            <FormControl>
-                                <div className="relative">
-                                    <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                                    <Input type="email" placeholder="name@company.com" className="pl-[40px] pt-[11px] pb-[12px] pr-[12px] bg-[#faf8fc]" {...field} />
-                                </div>
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <FormField
-                    control={form.control}
-                    name="password"
-                    render={({field}) => (
-                        <FormItem>
-                            <FormLabel>Password</FormLabel>
-                            <FormControl>
-                                <div className="relative">
-                                    <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                                    <Input type="password" placeholder="Enter your password" className="pl-[40px] pt-[11px] pb-[12px] pr-[12px] bg-[#faf8fc]" {...field} />
-                                </div>  
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <Button type="submit" className='w-full px-4 py-2.5'>Sign In</Button>
-            </form>
-        </Form>
-        <p className="text-center text-[#94A3B8] text-[12px]  font-normal tracking-[0.6px]">OR CONTINUE WITH GOOGLE</p>
-        <Button variant={'outline'} size={'lg'} className="w-full bg-transparent" >
-            <FcGoogle className="mr-2 h-4 w-4 size={20}" />
-            Continue with Google</Button>
-
-        <p className="text-center">Don&apos;t have an account? <a href="/signup" className="text-blue-500 hover:underline">Sign Up</a></p>
+        <div className="flex flex-col flex-1">
+        {/* main inputs and buttons at top */}
+        <div className="space-y-4">
+            <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
+                    <FormField
+                        control={form.control}
+                        name="email"
+                        render={({field}) => (
+                            <FormItem>
+                                <FormLabel className="text-[13px] font-medium text-[#1E293B]">Email</FormLabel>
+                                <FormControl>
+                                    <div className="relative">
+                                        <Mail className="absolute left-3 top-3 h-4 w-4 text-[#94A3B8]" />
+                                        <Input type="email" placeholder="name@company.com" className="pl-10 h-11 bg-[#F8FAFC] border-[#E2E8F0] text-[14px] placeholder:text-[#94A3B8]" {...field} />
+                                    </div>
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                    <FormField
+                        control={form.control}
+                        name="password"
+                        render={({field}) => (
+                            <FormItem>
+                                <FormLabel className="text-[13px] font-medium text-[#1E293B]">Password</FormLabel>
+                                <FormControl>
+                                    <div className="relative">
+                                        <Lock className="absolute left-3 top-3 h-4 w-4 text-[#94A3B8]" />
+                                        <Input type="password" placeholder="Enter your password" className="pl-10 h-11 bg-[#F8FAFC] border-[#E2E8F0] text-[14px] placeholder:text-[#94A3B8]" {...field} />
+                                    </div>  
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                    <div className="pt-2">
+                        <Button type="submit" className='w-full h-11 text-[14px] font-semibold tracking-wide shadow-sm'>Sign In</Button>
+                    </div>
+                </form>
+            </Form>
+            
+            <div className="flex items-center gap-3 mt-8 mb-6">
+                <div className="h-[1px] flex-1 bg-[#E2E8F0]"></div>
+                <p className="text-center text-[#94A3B8] text-[11px] font-medium tracking-wider uppercase">Or continue with google</p>
+                <div className="h-[1px] flex-1 bg-[#E2E8F0]"></div>
+            </div>
+            
+            <Button variant={'outline'} className="w-full h-11 bg-white border-[#E2E8F0] text-[#475569] font-medium hover:bg-[#F8FAFC]" >
+                <FcGoogle className="mr-2 h-5 w-5" />
+                Continue with Google
+            </Button>
+        </div>
+        {/* sign up link pinned to bottom */}
+        <p className="text-center mt-auto pb-6 md:mt-4 md:pb-0">Don&apos;t have an account? <a href="/signup" className="text-blue-500 hover:underline">Sign Up</a></p>
     </div>
     )
 

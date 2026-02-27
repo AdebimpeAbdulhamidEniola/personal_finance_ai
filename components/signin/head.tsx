@@ -1,12 +1,11 @@
 export const Head = () => {
   return (
-    <div className="mx-auto text-center">
-        <img src={"/Background.png"} alt="logo" decoding="async" className="block mx-auto m-1"/>
+    <div className="mx-auto text-center mb-6 md:mb-8">
+        <img src={"/Background.png"} alt="logo" decoding="async" className="block mx-auto"/>
         
-        <h1 className="text-[24px] font-bold mb-1">Welcome Back</h1>
-        <p className="text-muted-background bg-[#64748B]">Please enter your details to sign in</p>
+        <h1 className="text-[24px] font-bold mt-4 mb-1">Welcome Back</h1>
+        <p className="text-[#64748B] text-[14px]">Please enter your details to sign in</p>
     </div>
   )
 }
-
 

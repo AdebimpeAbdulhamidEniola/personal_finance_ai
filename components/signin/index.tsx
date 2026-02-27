@@ -4,11 +4,11 @@ import { Head } from "./head"
 
 export const Index = () => {
   return (
-    <div className="rounded-md">
+    <div className="flex flex-col flex-1">
         <Head  />
-        <LogInForm />
-      
+        <div className="mt-3 flex flex-col flex-1">
+          <LogInForm />
+        </div>
     </div>
   )
 }
-
