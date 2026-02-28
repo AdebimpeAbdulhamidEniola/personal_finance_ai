@@ -7,6 +7,7 @@ import {Button} from '../ui/button';
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '../ui/form';
 import {Mail, Lock,} from 'lucide-react';
 import {FcGoogle} from 'react-icons/fc';
+import Link from 'next/link';
 
 
 export const LogInForm = () =>{
@@ -79,7 +80,7 @@ export const LogInForm = () =>{
             </Button>
         </div>
         {/* sign up link pinned to bottom */}
-        <p className="text-center mt-auto pb-6 md:mt-4 md:pb-0">Don&apos;t have an account? <a href="/signup" className="text-blue-500 hover:underline">Sign Up</a></p>
+        <p className="text-center mt-auto pb-6 md:mt-4 md:pb-0">Don&apos;t have an account? <Link href="/signup" className="text-blue-500 hover:underline">Sign Up</Link></p>
     </div>
     )
 
