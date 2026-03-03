@@ -2,20 +2,21 @@ import { Button } from "../ui/button";
 import { User } from "lucide-react";
 
 const Hero = () => {
+  
   return (
-    <section className="bg-[#faf8fc] px-4 py-8 md:py-16 lg:py-24 max-w-7xl mx-auto">
+    <section className="bg-[#faf8fc] px-4 py-8 md:py-16 lg:py-24 max-w-8xl mx-auto">
       <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
         {/* Left Side: Copy & Calls to Action */}
         <div className="flex-1 flex flex-col items-start gap-6">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#0F172A]">
-            Master Your <br className="hidden md:block" />
-            <span className="text-primary text-[#2563EB]">Money</span>
+            Understand Your <br className="hidden md:block" />
+            <span className="text-primary text-[#2563EB]">Money with AI</span>
           </h1>
 
           <p className="text-lg md:text-xl text-slate-600 max-w-lg leading-relaxed">
-            Take control of your finances with FinTrack. Budget smarter, track
-            spending in real-time, and achieve your financial goals
-            effortlessly.
+            FinAI helps you see where your money goes, spot bad habits, and plan
+            better. Track what you earn and spend, view simple monthly summaries,
+            and get clear suggestions on how to save more.
           </p>
 
           <Button

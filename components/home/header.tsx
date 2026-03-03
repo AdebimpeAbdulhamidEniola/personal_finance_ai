@@ -7,10 +7,10 @@ const Header = () => {
       <div className="flex gap-2 bg-[#ffffff]">
         <div className="flex gap-2">
           <div className="w-5.4 h-7">
-            <img src="/Background.png" alt="logo" decoding="async" />
+            <img src="/Background.png" alt="FinAI logo" decoding="async" />
           </div>
           <p className="self-end text-[#0F172A] font-bold text-[20px]">
-            FinTrack
+            FinAI
           </p>
         </div>
 
