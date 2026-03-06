@@ -45,6 +45,20 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+
+  /* Custom Finance Colors */
+  --color-finance-primary: var(--finance-primary-blue);
+  --color-finance-slate-dark: var(--finance-slate-dark);
+  --color-finance-slate-medium: var(--finance-slate-medium);
+  --color-finance-slate-light: var(--finance-slate-light);
+  --color-finance-slate-border: var(--finance-slate-border);
+  --color-finance-gray-light: var(--finance-gray-light);
+  --color-finance-gray-dark: var(--finance-gray-dark);
+  --color-finance-purple: var(--finance-purple);
+  --color-finance-green: var(--finance-green);
+  --color-finance-blue-50: var(--finance-blue-50);
+  --color-finance-purple-50: var(--finance-purple-50);
+  --color-finance-green-50: var(--finance-green-50);
 }
 
 :root {
@@ -80,6 +94,25 @@
   --sidebar-ring: oklch(0.708 0 0);
   --background: #FAF8FC;
   --foreground: oklch(0.145 0 0);
+
+  /* Custom Colors - Finance App Theme */
+  --finance-primary-blue: #2563EB;
+  --finance-slate-dark: #1E293B;
+  --finance-slate-medium: #64748B;
+  --finance-slate-light: #94A3B8;
+  --finance-slate-border: #E2E8F0;
+  --finance-gray-light: #F8FAFC;
+  --finance-gray-dark: #475569;
+  --finance-purple: #9333EA;
+  --finance-green: #16A34A;
+  --finance-blue-50: #EFF6FF;
+  --finance-purple-50: #F3E8FF;
+  --finance-green-50: #F0FDF4;
+  --finance-sidebar-gradient: linear-gradient(180deg, rgba(15,23,42,1) 0%, rgba(15,23,42,0.8) 50%, rgba(15,23,42,1) 100%);
+  --finance-slate-800: #1E293B;
+  --finance-slate-700: #334155;
+  --finance-slate-200: #E2E8F0;
+  --finance-slate-100: #F1F5F9;
 }
 
 .dark {

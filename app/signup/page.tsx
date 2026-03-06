@@ -1,11 +1,7 @@
-import Index from "@/components/signup/index"
+import Index from "@/components/signup/index";
 
-const signupPage = () => {
-    return(
-        <div>
-            <Index />
-        </div>
-    )
-}
+const SignupPage = () => {
+  return <> </>;
+};
 
-export default signupPage
+export default SignupPage;

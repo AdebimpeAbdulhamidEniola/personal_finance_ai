@@ -35,11 +35,11 @@ export const LogInForm = () =>{
                         name="email"
                         render={({field}) => (
                             <FormItem>
-                                <FormLabel className="text-[13px] font-medium text-[#1E293B]">Email</FormLabel>
+                                <FormLabel className="text-[13px] font-medium text-[var(--finance-slate-dark)]">Email</FormLabel>
                                 <FormControl>
                                     <div className="relative">
-                                        <Mail className="absolute left-3 top-3 h-4 w-4 text-[#94A3B8]" />
-                                        <Input type="email" placeholder="name@company.com" className="pl-10 h-11 bg-[#F8FAFC] border-[#E2E8F0] text-[14px] placeholder:text-[#94A3B8]" {...field} />
+                                        <Mail className="absolute left-3 top-3 h-4 w-4 text-[var(--finance-slate-light)]" />
+                                        <Input type="email" placeholder="name@company.com" className="pl-10 h-11 bg-[var(--finance-gray-light)] border-[var(--finance-slate-border)] text-[14px] placeholder:text-[var(--finance-slate-light)]" {...field} />
                                     </div>
                                 </FormControl>
                                 <FormMessage />
@@ -51,11 +51,11 @@ export const LogInForm = () =>{
                         name="password"
                         render={({field}) => (
                             <FormItem>
-                                <FormLabel className="text-[13px] font-medium text-[#1E293B]">Password</FormLabel>
+                                <FormLabel className="text-[13px] font-medium text-[var(--finance-slate-dark)]">Password</FormLabel>
                                 <FormControl>
                                     <div className="relative">
-                                        <Lock className="absolute left-3 top-3 h-4 w-4 text-[#94A3B8]" />
-                                        <Input type="password" placeholder="Enter your password" className="pl-10 h-11 bg-[#F8FAFC] border-[#E2E8F0] text-[14px] placeholder:text-[#94A3B8]" {...field} />
+                                        <Lock className="absolute left-3 top-3 h-4 w-4 text-[var(--finance-slate-light)]" />
+                                        <Input type="password" placeholder="Enter your password" className="pl-10 h-11 bg-[var(--finance-gray-light)] border-[var(--finance-slate-border)] text-[14px] placeholder:text-[var(--finance-slate-light)]" {...field} />
                                     </div>  
                                 </FormControl>
                                 <FormMessage />
@@ -69,12 +69,12 @@ export const LogInForm = () =>{
             </Form>
             
             <div className="flex items-center gap-3 mt-8 mb-6">
-                <div className="h-[1px] flex-1 bg-[#E2E8F0]"></div>
-                <p className="text-center text-[#94A3B8] text-[11px] font-medium tracking-wider uppercase">Or continue with google</p>
-                <div className="h-[1px] flex-1 bg-[#E2E8F0]"></div>
+                <div className="h-[1px] flex-1 bg-[var(--finance-slate-border)]"></div>
+                <p className="text-center text-[var(--finance-slate-light)] text-[11px] font-medium tracking-wider uppercase">Or continue with google</p>
+                <div className="h-[1px] flex-1 bg-[var(--finance-slate-border)]"></div>
             </div>
             
-            <Button variant={'outline'} className="w-full h-11 bg-white border-[#E2E8F0] text-[#475569] font-medium hover:bg-[#F8FAFC]" >
+            <Button variant={'outline'} className="w-full h-11 bg-white border-[var(--finance-slate-border)] text-[var(--finance-slate-dark)] font-medium hover:bg-[var(--finance-gray-light)]" >
                 <FcGoogle className="mr-2 h-5 w-5" />
                 Continue with Google
             </Button>

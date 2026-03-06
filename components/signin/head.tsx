@@ -4,7 +4,7 @@ export const Head = () => {
         <img src={"/Background.png"} alt="logo" decoding="async" className="block mx-auto"/>
         
         <h1 className="text-[24px] font-bold mt-4 mb-1">Welcome Back</h1>
-        <p className="text-[#64748B] text-[14px]">Please enter your details to sign in</p>
+        <p className="text-[var(--finance-slate-medium)] text-[14px]">Please enter your details to sign in</p>
     </div>
   )
 }

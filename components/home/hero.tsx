@@ -1,10 +1,11 @@
 import { Button } from "../ui/button";
 import { User } from "lucide-react";
+import Link from "next/link";
 
 const Hero = () => {
   
   return (
-    <section className="bg-[#faf8fc] px-4 py-8 md:py-16 lg:py-24 max-w-8xl mx-auto">
+    <section className="bg-[#faf8fc] px-4 py-8 md:px-12 md:py-16 lg:py-24 max-w-8xl mx-auto">
       <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
         {/* Left Side: Copy & Calls to Action */}
         <div className="flex-1 flex flex-col items-start gap-6">
@@ -19,12 +20,14 @@ const Hero = () => {
             and get clear suggestions on how to save more.
           </p>
 
-          <Button
-            size="lg"
-            className="bg-[#2563EB] hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg shadow-blue-500/30"
-          >
-            Get Started Free
-          </Button>
+          <Link href="/signup">
+            <Button
+              size="lg"
+              className="bg-[#2563EB] hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg shadow-blue-500/30"
+            >
+              Get Started Free
+            </Button>
+          </Link>
 
           <div className="flex items-center gap-3 mt-4">
             <div className="flex -space-x-3">

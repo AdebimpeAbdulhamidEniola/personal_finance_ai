@@ -27,8 +27,8 @@ const featuresData: FeatureItem[] = [
     description:
       "Your account is protected so only you can see your money details. We keep your information private and secure.",
     icon: <Lock className="w-6 h-6" />,
-    iconBgClass: "bg-blue-50",
-    iconTextClass: "text-[#2563EB]", // Primary blue
+    iconBgClass: "bg-[var(--finance-blue-50)]",
+    iconTextClass: "text-[var(--finance-primary-blue)]", // Primary blue
   },
   {
     id: "see-every-naira",
@@ -36,8 +36,8 @@ const featuresData: FeatureItem[] = [
     description:
       "Write down what you earn and what you spend, and FinAI turns it into clear monthly summaries and simple charts you can understand at a glance.",
     icon: <TrendingUp className="w-6 h-6" />,
-    iconBgClass: "bg-purple-50",
-    iconTextClass: "text-[#9333ea]", // Purple
+    iconBgClass: "bg-[var(--finance-purple-50)]",
+    iconTextClass: "text-[var(--finance-purple)]", // Purple
   },
   {
     id: "smart-advice",
@@ -45,8 +45,8 @@ const featuresData: FeatureItem[] = [
     description:
       "Let AI act like a friendly money coach, showing you bad habits, where you can cut costs, and how to move closer to your savings goals.",
     icon: <Wallet className="w-6 h-6" />,
-    iconBgClass: "bg-green-50",
-    iconTextClass: "text-[#16a34a]", // Green
+    iconBgClass: "bg-[var(--finance-green-50)]",
+    iconTextClass: "text-[var(--finance-green)]", // Green
   },
 ];
 
