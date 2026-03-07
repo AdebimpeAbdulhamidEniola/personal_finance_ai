@@ -8,9 +8,12 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '..
 import {Mail, Lock,} from 'lucide-react';
 import {FcGoogle} from 'react-icons/fc';
 import Link from 'next/link';
-
+import { useLogin } from '@/hooks/query-hook';
+import {toast} from 'sonner';
 
 export const LogInForm = () =>{
+    const {mutateAsync: loginUser, isPending} = useLogin();
+    
     const form = useForm<LogInData>({
         resolver: zodResolver(logInSchema),
         defaultValues: {
@@ -19,10 +22,19 @@ export const LogInForm = () =>{
         }
     });
 
-    const onSubmit = (data: LogInData) => {
-        console.log(data);
-        form.reset();
-    } 
+    const onSubmit = async(formData: LogInData) => {
+        try {
+            await loginUser(formData)
+            console.log("Login successful")
+            
+            if (typeof window !== undefined) 
+                toast.success("Login successful")
+        } catch (error) {
+            console.log("Login failed", error)
+            if (typeof window !== undefined) 
+                toast.error("Login Failed")
+        }
+    }
 
     return (
         <div className="flex flex-col flex-1">
@@ -63,7 +75,20 @@ export const LogInForm = () =>{
                         )}
                     />
                     <div className="pt-2">
-                        <Button type="submit" className='w-full h-11 text-[14px] font-semibold tracking-wide shadow-sm'>Sign In</Button>
+                        <Button 
+                            type="submit" 
+                            className='w-full h-11 text-[14px] font-semibold tracking-wide shadow-sm cursor-pointer hover:opacity-90 transition-opacity'
+                            disabled={isPending}
+                        >
+                            {isPending ? (
+                                <div className="flex items-center justify-center gap-2">
+                                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                                    Signing In...
+                                </div>
+                            ) : (
+                                'Sign In'
+                            )}
+                        </Button>
                     </div>
                 </form>
             </Form>
@@ -74,13 +99,16 @@ export const LogInForm = () =>{
                 <div className="h-[1px] flex-1 bg-[var(--finance-slate-border)]"></div>
             </div>
             
-            <Button variant={'outline'} className="w-full h-11 bg-white border-[var(--finance-slate-border)] text-[var(--finance-slate-dark)] font-medium hover:bg-[var(--finance-gray-light)]" >
+            <Button 
+                variant={'outline'} 
+                className="w-full h-11 bg-white border-[var(--finance-slate-border)] text-[var(--finance-slate-dark)] font-medium hover:bg-[var(--finance-gray-light)] cursor-pointer" 
+            >
                 <FcGoogle className="mr-2 h-5 w-5" />
                 Continue with Google
             </Button>
         </div>
         {/* sign up link pinned to bottom */}
-        <p className="text-center mt-auto pb-6 md:mt-4 md:pb-0">Don&apos;t have an account? <Link href="/signup" className="text-blue-500 hover:underline">Sign Up</Link></p>
+        <p className="text-center mt-auto pb-6 md:mt-4 md:pb-0">Don&apos;t have an account? <Link href="/signup" className="text-blue-500 hover:underline cursor-pointer">Sign Up</Link></p>
     </div>
     )
 

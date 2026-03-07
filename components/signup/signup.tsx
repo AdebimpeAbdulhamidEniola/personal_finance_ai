@@ -8,9 +8,14 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '..
 import {Mail, Lock,} from 'lucide-react';
 import {FcGoogle} from 'react-icons/fc';
 import Link from "next/link";
+import { useRegister } from '@/hooks/query-hook';
+import {toast} from 'sonner';
 
 
 const SignUpForm = ( ) => {
+    const {mutateAsync: registerUser, isPending} = useRegister();
+   
+
     const form = useForm<SignUpData>({
         resolver: zodResolver(signUpSchema),
         defaultValues: {
@@ -22,11 +27,24 @@ const SignUpForm = ( ) => {
 
     })
 
-    const onSubmit = (data: SignUpData) => {
-        console.log(data);
-        form.reset();
-    } 
+    const formData = form.getValues();
 
+    const onSubmit = async(formData: SignUpData) => {
+        try {
+            await registerUser(formData)
+            console.log("Registration successful")
+           
+            if (typeof window !== undefined) 
+                toast.success("Account created successfully")
+        } catch (error) {
+            console.log("Registration failed", error)
+            if (typeof window !== undefined) 
+             toast.error("Registration Failed")
+        }
+        
+
+    }
+    
     return (
     <div className="w-full max-w-md mx-auto space-y-8">
             {/* The Head of Form */}
@@ -102,7 +120,20 @@ const SignUpForm = ( ) => {
                             </FormItem>
                         )}
                     />
-                    <Button type="submit" className='w-full h-11 text-[14px] font-semibold tracking-wide shadow-sm'>Create Account</Button>
+                    <Button 
+                        type="submit" 
+                        className='w-full h-11 text-[14px] font-semibold tracking-wide shadow-sm cursor-pointer hover:opacity-90 transition-opacity'
+                        disabled={isPending}
+                    >
+                        {isPending ? (
+                            <div className="flex items-center justify-center gap-2">
+                                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                                Creating Account...
+                            </div>
+                        ) : (
+                            'Create Account'
+                        )}
+                    </Button>
                 </form>
             </Form>
 
@@ -116,7 +147,7 @@ const SignUpForm = ( ) => {
                 </div>
                 <Button
                     variant={'outline'}
-                    className="w-full h-11 bg-white border-[var(--finance-slate-border)] text-[var(--finance-gray-dark)] font-medium hover:bg-[var(--finance-gray-light)]"
+                    className="w-full h-11 bg-white border-[var(--finance-slate-border)] text-[var(--finance-gray-dark)] font-medium hover:bg-[var(--finance-gray-light)] cursor-pointer"
                 >
                     <FcGoogle className="mr-2 h-5 w-5" />
                     Continue with Google
@@ -128,7 +159,7 @@ const SignUpForm = ( ) => {
                 <Link href="/signin">
                     <Button
                         variant="ghost"
-                        className="h-auto p-0 px-1 text-[13px] text-[var(--finance-primary-blue)] hover:bg-transparent underline-offset-4 hover:underline"
+                        className="h-auto p-0 px-1 text-[13px] text-[var(--finance-primary-blue)] hover:bg-transparent underline-offset-4 hover:underline cursor-pointer"
                     >
                         Log in
                     </Button>
