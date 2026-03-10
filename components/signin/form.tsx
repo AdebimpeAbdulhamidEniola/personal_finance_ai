@@ -10,9 +10,13 @@ import {FcGoogle} from 'react-icons/fc';
 import Link from 'next/link';
 import { useLogin } from '@/hooks/query-hook';
 import {toast} from 'sonner';
+import { useAuthStore } from '@/store/useAuthSore';
+import { log } from 'console';
 
 export const LogInForm = () =>{
     const {mutateAsync: loginUser, isPending} = useLogin();
+    const {setToken} = useAuthStore()
+    
     
     const form = useForm<LogInData>({
         resolver: zodResolver(logInSchema),
@@ -24,7 +28,10 @@ export const LogInForm = () =>{
 
     const onSubmit = async(formData: LogInData) => {
         try {
-            await loginUser(formData)
+        
+            const response= await loginUser(formData)
+            const {token} = response.data
+            setToken(token)
             console.log("Login successful")
             
             if (typeof window !== undefined) 

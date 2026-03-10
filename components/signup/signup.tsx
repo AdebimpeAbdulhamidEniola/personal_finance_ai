@@ -35,11 +35,11 @@ const SignUpForm = ( ) => {
             console.log("Registration successful")
            
             if (typeof window !== undefined) 
-                toast.success("Account created successfully")
+                toast.success("Please verify your email to continue")
         } catch (error) {
             console.log("Registration failed", error)
             if (typeof window !== undefined) 
-             toast.error("Registration Failed")
+             toast.error("An error occurred during registration")
         }
         
 
