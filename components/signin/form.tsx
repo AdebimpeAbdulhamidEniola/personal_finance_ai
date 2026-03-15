@@ -11,9 +11,10 @@ import Link from 'next/link';
 import { useLogin } from '@/hooks/query-hook';
 import {toast} from 'sonner';
 import { useAuthStore } from '@/store/useAuthSore';
-import { log } from 'console';
+import { useRouter } from "next/navigation";
 
 export const LogInForm = () =>{
+    const router = useRouter();
     const {mutateAsync: loginUser, isPending} = useLogin();
     const {setToken} = useAuthStore()
     
@@ -33,6 +34,8 @@ export const LogInForm = () =>{
             const {token} = response.data
             setToken(token)
             console.log("Login successful")
+            router.push("/dashboard")
+
             
             if (typeof window !== undefined) 
                 toast.success("Login successful")

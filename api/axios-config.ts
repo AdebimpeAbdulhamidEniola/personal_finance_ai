@@ -14,24 +14,35 @@ export const api = axios.create({
 
 api.interceptors.request.use(
     (config) => {
-        //Nextjs environment
-
-        if (typeof window !== undefined) {
-            const token = localStorage.getItem('authToken')
-            if (token) {
-                config.headers.Authorization = `Bearer ${token}`
+        // 1. Check if we are in the browser
+        if (typeof window !== 'undefined') { 
+            // 2. Get the raw string from local storage
+            const storageData = localStorage.getItem('auth_store'); // Check if your key in application tab is exactly 'authToken'
+            
+            if (storageData) {
+                try {
+                    // 3. Parse the Zustand JSON object
+                    const parsedData = JSON.parse(storageData);
+                    
+                    // 4. Extract JUST the raw token string
+                    const actualToken = parsedData.state.token; 
+                    
+                    // 5. Attach the clean token to the header
+                    if (actualToken) {
+                        config.headers.Authorization = `Bearer ${actualToken}`;
+                    }
+                } catch (error) {
+                    // Fallback: Just in case you later save it as a raw string instead of a JSON object
+                    config.headers.Authorization = `Bearer ${storageData}`;
+                }
             }
         }
-        return config
+        return config;
     },
     (error) => {
-        console.log("Axios caught an error", error)
-
-        //throw the error to ReactQuery
-        return Promise.reject(error)
+        return Promise.reject(error);
     }
-)
-
+);
 
 // api.interceptors.response.use(
 //   (response) => response,
