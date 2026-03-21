@@ -1,25 +1,22 @@
 "use client";
 
-import { Calendar } from "lucide-react";
+import { useAuthStore } from "@/store/useAuthSore";
+import { Button } from "@/components/ui/button";
+import { AddTransactionDialog } from "./add-transaction-dialog";
 
 export const DashboardHeader = () => {
-  const today = new Date().toLocaleDateString('en-US', { 
-    weekday: 'long', 
-    year: 'numeric', 
-    month: 'long', 
-    day: 'numeric' 
-  });
+  const { name } = useAuthStore();
 
   return (
     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
       <div>
         <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
-          Dashboard
+          Welcome back, {name || 'User'}!
         </h1>
-        <div className="flex items-center gap-2 mt-1 text-slate-500 dark:text-slate-400">
-          <Calendar className="h-4 w-4" />
-          <span className="text-sm font-medium">{today}</span>
-        </div>
+        {/* User requested NOT to include the bottom text "Here's your financial report..." */}
+      </div>
+      <div className="flex items-center gap-3">
+        <AddTransactionDialog />
       </div>
     </div>
   );

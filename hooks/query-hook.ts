@@ -4,12 +4,7 @@ import { SignUpData, LogInData } from "@/schema"
 import { api } from "@/api/axios-config";
 
 
-interface TransactionData {
-    type: "INCOME" | "EXPENSE";
-    amount: number;
-    category: string;
-    description?: string;
-}
+
 export const useRegister = () => {
     return useMutation({
         mutationFn:  async (data:SignUpData ) => {
@@ -28,13 +23,4 @@ export const useLogin = () => {
     })
 }
 
-//add a transaction
 
-export const useAddTransaction = () => {
-    return useMutation({
-        mutationFn: async (data: TransactionData) => {
-            const response = await api.post("/api/transactions", data)
-            return response.data
-        }
-    })
-}

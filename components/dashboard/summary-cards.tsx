@@ -7,7 +7,7 @@ import { SummaryCard } from "./summary-card";
 import { useTransactionsInfo } from "@/hooks/use-dashboard";
 
 const formatCurrency = (amount: number) =>
-  new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(amount);
+  "#" + new Intl.NumberFormat("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(amount);
 
 export const SummaryCards = () => {
   const { summary, isLoading, error } = useTransactionsInfo();

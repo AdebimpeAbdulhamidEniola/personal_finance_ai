@@ -1,5 +1,5 @@
 "use client"
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation } from "@tanstack/react-query";
 import { api } from "@/api/axios-config";
 
 type Transaction = {
@@ -24,6 +24,13 @@ type TrendResult = {
   value: string;
   isPositive: boolean;
 };
+
+interface TransactionData {
+    type: "INCOME" | "EXPENSE";
+    amount: number;
+    category: string;
+    description?: string;
+}
 
 const calculateTrend = (
   current: number,
@@ -72,6 +79,20 @@ export const useTransactionsInfo = () => {
 
   return { data, summary, isLoading, error };
 };
+
+
+
+//add a transaction
+
+export const useAddTransaction = () => {
+    return useMutation({
+        mutationFn: async (data: TransactionData) => {
+            const response = await api.post("/api/transactions", data)
+            return response.data
+        }
+    })
+}
+
 
 
 

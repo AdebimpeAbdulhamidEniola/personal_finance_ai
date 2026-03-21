@@ -29,17 +29,20 @@ export const LogInForm = () =>{
 
     const onSubmit = async(formData: LogInData) => {
         try {
-        
-            const response= await loginUser(formData)
-            const {token,data} = response.data
-            setToken(token)
-            setEmail(data.email)
-            setName(data.name)
+            const response = await loginUser(formData)
+            
+            // API response from axios is already unwrapped by the hook (returns response.data),
+            // so shape here is: { status, message, data: { user: { id, email, name }, token } }
+            const { token, user } = response.data;
+            
+            if (token) setToken(token);
+            if (user?.email) setEmail(user.email);
+            if (user?.name) setName(user.name);
+            
             console.log("Login successful")
             router.push("/dashboard")
-
             
-            if (typeof window !== undefined) 
+            if (typeof window !== "undefined") 
                 toast.success("Login successful")
         } catch (error) {
             console.log("Login failed", error)
