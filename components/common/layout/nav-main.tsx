@@ -99,7 +99,7 @@ function SidebarNav({ items, label, className }: SidebarNavProps) {
 
 
 
-export function NavMain() {
+export const NavMain = () => {
   return (
     <>
       <SidebarNav items={mainMenu} />

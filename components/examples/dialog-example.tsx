@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { ControlledDialog } from "@/components/ui/controlled-dialog"
 import { useDialog } from "@/hooks/use-dialog"
 
-export function DialogExample() {
+export const DialogExample = () => {
   const { isOpen, open, close } = useDialog()
 
   return (

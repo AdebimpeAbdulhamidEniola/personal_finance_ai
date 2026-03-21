@@ -70,5 +70,8 @@ export const useTransactionsInfo = () => {
 
   const summary = calculateSummary(data ?? []);
 
-  return { summary, isLoading, error };
+  return { data, summary, isLoading, error };
 };
+
+
+

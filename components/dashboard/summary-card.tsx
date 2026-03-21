@@ -19,14 +19,14 @@ type SummaryCardProps = {
   trendColors: string;
 };
 
-export function SummaryCard({
+export const SummaryCard = ({
   title,
   value,
   trend,
   icon: Icon,
   iconColors,
   trendColors,
-}: SummaryCardProps) {
+}: SummaryCardProps) => {
   return (
     <Card className="relative rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
       <div className="absolute top-0 left-0 right-0 h-[3px] overflow-hidden">

@@ -21,7 +21,7 @@ interface ControlledDialogProps {
   className?: string
 }
 
-export function ControlledDialog({
+export const ControlledDialog = ({
   isOpen,
   onClose,
   title,
@@ -30,7 +30,7 @@ export function ControlledDialog({
   footer,
   showCloseButton = true,
   className,
-}: ControlledDialogProps) {
+}: ControlledDialogProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent showCloseButton={showCloseButton} className={className}>

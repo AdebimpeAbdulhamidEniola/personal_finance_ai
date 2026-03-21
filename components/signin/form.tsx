@@ -16,7 +16,7 @@ import { useRouter } from "next/navigation";
 export const LogInForm = () =>{
     const router = useRouter();
     const {mutateAsync: loginUser, isPending} = useLogin();
-    const {setToken} = useAuthStore()
+    const {setToken,setEmail,setName} = useAuthStore()
     
     
     const form = useForm<LogInData>({
@@ -31,8 +31,10 @@ export const LogInForm = () =>{
         try {
         
             const response= await loginUser(formData)
-            const {token} = response.data
+            const {token,data} = response.data
             setToken(token)
+            setEmail(data.email)
+            setName(data.name)
             console.log("Login successful")
             router.push("/dashboard")
 

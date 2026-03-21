@@ -13,7 +13,12 @@ const AppSidebar = () => {
   return (
     <Sidebar
       className="border-r-0"
-      style={{ background: "var(--finance-slate-dark)", width: "220px" }}
+      style={{
+        "--sidebar": "var(--finance-slate-dark)",
+        "--sidebar-border": "var(--finance-slate-dark)",
+        background: "var(--finance-slate-dark)",
+        width: "220px"
+      } as React.CSSProperties}
       side="left"
     >
       {/* Logo */}

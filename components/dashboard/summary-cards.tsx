@@ -9,7 +9,7 @@ import { useTransactionsInfo } from "@/hooks/use-dashboard";
 const formatCurrency = (amount: number) =>
   new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(amount);
 
-export function SummaryCards() {
+export const SummaryCards = () => {
   const { summary, isLoading, error } = useTransactionsInfo();
 
   if (isLoading) {
