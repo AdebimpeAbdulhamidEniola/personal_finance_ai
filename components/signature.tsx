@@ -10,7 +10,7 @@ export function Signature() {
           {/* Signature Image */}
           <div className="relative">
             <img
-              src="/signature.jpg"
+              src="/sain.png"
               alt="Adebimpe Abdulhamid Eniola Signature"
               width={200}
               height={60}
