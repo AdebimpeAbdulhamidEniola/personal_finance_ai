@@ -147,10 +147,9 @@ const SignUpForm = ( ) => {
                 </div>
                 <Button
                     variant={'outline'}
-                    className="w-full h-11 bg-white border-[var(--finance-slate-border)] text-[var(--finance-gray-dark)] font-medium hover:bg-[var(--finance-gray-light)] cursor-pointer"
+                    className="w-full h-11 bg-white border-[var(--finance-slate-border)] text-[var(--finance-slate-dark)] font-medium hover:bg-[var(--finance-gray-light)] cursor-pointer"
                 >
-                    <FcGoogle className="mr-2 h-5 w-5" />
-                    Continue with Google
+                    Sign Up
                 </Button>
             </div>
 

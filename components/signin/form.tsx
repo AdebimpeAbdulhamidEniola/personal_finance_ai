@@ -16,6 +16,7 @@ import { useRouter } from "next/navigation";
 export const LogInForm = () =>{
     const router = useRouter();
     const {mutateAsync: loginUser, isPending} = useLogin();
+
     const {setToken,setEmail,setName} = useAuthStore()
     
     
@@ -110,17 +111,9 @@ export const LogInForm = () =>{
             
             <div className="flex items-center gap-3 mt-8 mb-6">
                 <div className="h-[1px] flex-1 bg-[var(--finance-slate-border)]"></div>
-                <p className="text-center text-[var(--finance-slate-light)] text-[11px] font-medium tracking-wider uppercase">Or continue with google</p>
+                <p className="text-center text-[var(--finance-slate-light)] text-[11px] font-medium tracking-wider uppercase">Sign in with your account</p>
                 <div className="h-[1px] flex-1 bg-[var(--finance-slate-border)]"></div>
             </div>
-            
-            <Button 
-                variant={'outline'} 
-                className="w-full h-11 bg-white border-[var(--finance-slate-border)] text-[var(--finance-slate-dark)] font-medium hover:bg-[var(--finance-gray-light)] cursor-pointer" 
-            >
-                <FcGoogle className="mr-2 h-5 w-5" />
-                Continue with Google
-            </Button>
         </div>
         {/* sign up link pinned to bottom */}
         <p className="text-center mt-auto pb-6 md:mt-4 md:pb-0">Don&apos;t have an account? <Link href="/signup" className="text-blue-500 hover:underline cursor-pointer">Sign Up</Link></p>
