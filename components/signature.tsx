@@ -11,7 +11,7 @@ export function Signature() {
           {/* Signature Image */}
           <div className="relative">
             <Image
-              src="/signature.svg"
+              src="/signature.jpg"
               alt="Adebimpe Abdulhamid Eniola Signature"
               width={200}
               height={60}
