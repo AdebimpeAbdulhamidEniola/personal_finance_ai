@@ -1,0 +1,44 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Beautiful signature for Adebimpe Abdulhamid Eniola -->
+  <defs>
+    <linearGradient id="sigGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Signature path - elegant cursive style -->
+  <path 
+    d="M 10 30 
+       Q 15 20, 25 25 
+       T 40 30
+       Q 50 35, 55 25
+       T 65 30
+       Q 70 35, 75 30
+       T 85 25
+       Q 90 20, 95 25
+       T 105 30
+       Q 110 35, 115 30
+       T 125 25
+       Q 130 20, 135 25
+       T 145 30
+       Q 150 35, 155 30
+       T 165 25
+       Q 170 20, 175 25
+       T 185 30
+       Q 190 35, 195 30"
+    stroke="url(#sigGradient)" 
+    stroke-width="2.5" 
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  
+  <!-- Initial "A" -->
+  <text x="10" y="35" font-family="cursive" font-size="18" fill="url(#sigGradient)" font-weight="600">
+    A
+  </text>
+  
+  <!-- Small decorative element -->
+  <circle cx="190" cy="30" r="2" fill="url(#sigGradient)" opacity="0.8"/>
+</svg>

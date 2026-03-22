@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "./provider";
 import { Toaster } from "sonner";
 import StructuredData from "@/components/seo/structured-data";
+import { Signature } from "@/components/signature";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,9 +58,12 @@ export default function RootLayout({
         <meta name="google-site-verification" content="htuWmAbd6FuGm4T00us-IzUJDRptfrAlNpvnp6NLs7o" />
         <StructuredData />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} min-h-screen flex flex-col`}>
         <Providers>
-          {children}
+          <main className="flex-1">
+            {children}
+          </main>
+          <Signature />
           <Toaster />
         </Providers>
       </body>
