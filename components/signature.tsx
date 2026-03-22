@@ -1,7 +1,6 @@
 "use client";
 
 import { Heart } from "lucide-react";
-import Image from "next/image";
 
 export function Signature() {
   return (
@@ -10,13 +9,12 @@ export function Signature() {
         <div className="flex flex-col items-center space-y-3">
           {/* Signature Image */}
           <div className="relative">
-            <Image
+            <img
               src="/signature.jpg"
               alt="Adebimpe Abdulhamid Eniola Signature"
               width={200}
               height={60}
               className="h-auto max-w-[200px]"
-              priority
             />
           </div>
           
