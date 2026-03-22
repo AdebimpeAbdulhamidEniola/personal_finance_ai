@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -66,7 +67,7 @@ export function BudgetSection({ data, isLoading, isError }: BudgetSectionProps) 
   const budgetData: BudgetData = data.data;
 
   const getCategoryIcon = (category: string) => {
-    const iconMap: Record<string, JSX.Element> = {
+    const iconMap: Record<string, React.ReactNode> = {
       "Food": <PiggyBank className="h-4 w-4" />,
       "Utilities": <Wallet className="h-4 w-4" />,
       "Entertainment": <Target className="h-4 w-4" />,
