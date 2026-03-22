@@ -8,6 +8,7 @@ import StructuredData from "@/components/seo/structured-data";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://mykudi.vercel.app'),
   title: "FinTrack – AI Personal Finance Dashboard | Budget Tracking & Expense Management",
   description: "Transform your financial life with AI-powered personal finance management. Track expenses, manage budgets, and get smart insights to achieve your financial goals.",
   keywords: "personal finance, AI finance dashboard, budget tracking, expense management, financial planning, money management, budget app, expense tracker",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: "FinTrack – AI Personal Finance Dashboard",
     description: "AI-powered personal finance management with smart budget tracking and expense insights",
     type: "website",
-    url: "https://your-domain.vercel.app",
+    url: "https://mykudi.vercel.app",
     images: [
       {
         url: "/og-image.svg",

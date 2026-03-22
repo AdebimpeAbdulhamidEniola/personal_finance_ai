@@ -1,5 +1,5 @@
 export default function StructuredData() {
-  const baseUrl = 'https://your-domain.vercel.app'
+  const baseUrl = 'https://mykudi.vercel.app'
   
   const structuredData = {
     "@context": "https://schema.org",
