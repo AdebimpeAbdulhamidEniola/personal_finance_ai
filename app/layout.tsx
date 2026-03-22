@@ -54,6 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="htuWmAbd6FuGm4T00us-IzUJDRptfrAlNpvnp6NLs7o" />
         <StructuredData />
       </head>
       <body className={inter.className}>
