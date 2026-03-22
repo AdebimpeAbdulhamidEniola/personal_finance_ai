@@ -12,9 +12,9 @@ export function Signature() {
             <img
               src="/sain.png"
               alt="Adebimpe Abdulhamid Eniola Signature"
-              width={200}
-              height={60}
-              className="h-auto max-w-[200px]"
+              width={120}
+              height={40}
+              className="h-auto max-w-[120px]"
             />
           </div>
           
