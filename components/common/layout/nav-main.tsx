@@ -5,8 +5,6 @@ import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
   ArrowLeftRight,
-  PieChart,
-  BarChart2,
   Sparkles,
   type LucideIcon,
 } from "lucide-react";
@@ -30,8 +28,6 @@ export type NavItem = {
 export const mainMenu: NavItem[] = [
   { label: "Dashboard",    href: "/dashboard",              icon: LayoutDashboard },
   { label: "Transactions", href: "/dashboard/transactions", icon: ArrowLeftRight  },
-  { label: "Budgets",      href: "/dashboard/budgets",      icon: PieChart        },
-  { label: "Reports",      href: "/dashboard/reports",      icon: BarChart2       },
 ];
 
 export const toolsMenu: NavItem[] = [

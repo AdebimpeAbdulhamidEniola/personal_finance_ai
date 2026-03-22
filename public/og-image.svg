@@ -1,0 +1,114 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E293B;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+  </defs>
+  
+  <!-- Main Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Background Pattern -->
+  <g opacity="0.1">
+    <circle cx="100" cy="100" r="50" fill="white"/>
+    <circle cx="1100" cy="530" r="80" fill="white"/>
+    <circle cx="600" cy="50" r="30" fill="white"/>
+    <circle cx="200" cy="500" r="40" fill="white"/>
+    <circle cx="1000" cy="150" r="60" fill="white"/>
+  </g>
+  
+  <!-- Main Card -->
+  <rect x="60" y="115" width="1080" height="400" rx="20" fill="url(#cardGradient)" filter="url(#blur)"/>
+  
+  <!-- Dashboard Mockup -->
+  <g transform="translate(100, 180)">
+    <!-- Chart Area -->
+    <rect x="0" y="0" width="300" height="200" rx="10" fill="#1E293B" opacity="0.8"/>
+    
+    <!-- Pie Chart Mock -->
+    <circle cx="150" cy="80" r="40" fill="none" stroke="#3B82F6" stroke-width="8" opacity="0.8"/>
+    <circle cx="150" cy="80" r="40" fill="none" stroke="#10B981" stroke-width="8" 
+            stroke-dasharray="50 251.2" stroke-dashoffset="-62.8" opacity="0.8"/>
+    <circle cx="150" cy="80" r="40" fill="none" stroke="#F59E0B" stroke-width="8" 
+            stroke-dasharray="37.68 251.2" stroke-dashoffset="-112.8" opacity="0.8"/>
+    
+    <!-- Chart Labels -->
+    <text x="150" y="140" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Expenses by Category</text>
+    
+    <!-- Stats Cards -->
+    <rect x="350" y="0" width="140" height="80" rx="8" fill="#10B981" opacity="0.2"/>
+    <text x="420" y="30" text-anchor="middle" fill="#10B981" font-family="Arial, sans-serif" font-size="24" font-weight="bold">+12%</text>
+    <text x="420" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12">Income</text>
+    
+    <rect x="510" y="0" width="140" height="80" rx="8" fill="#EF4444" opacity="0.2"/>
+    <text x="580" y="30" text-anchor="middle" fill="#EF4444" font-family="Arial, sans-serif" font-size="24" font-weight="bold">-8%</text>
+    <text x="580" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12">Expenses</text>
+    
+    <rect x="670" y="0" width="140" height="80" rx="8" fill="#3B82F6" opacity="0.2"/>
+    <text x="740" y="30" text-anchor="middle" fill="#3B82F6" font-family="Arial, sans-serif" font-size="24" font-weight="bold">#5.2k</text>
+    <text x="740" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12">Savings</text>
+    
+    <!-- Budget Breakdown -->
+    <rect x="350" y="100" width="460" height="100" rx="8" fill="#1E293B" opacity="0.8"/>
+    <text x="380" y="130" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Budget Recommendations</text>
+    
+    <!-- Progress Bars -->
+    <rect x="380" y="145" width="60" height="8" rx="4" fill="#334155"/>
+    <rect x="380" y="145" width="48" height="8" rx="4" fill="#3B82F6"/>
+    <text x="450" y="152" fill="white" font-family="Arial, sans-serif" font-size="11">Housing 80%</text>
+    
+    <rect x="550" y="145" width="60" height="8" rx="4" fill="#334155"/>
+    <rect x="550" y="145" width="30" height="8" rx="4" fill="#10B981"/>
+    <text x="620" y="152" fill="white" font-family="Arial, sans-serif" font-size="11">Food 50%</text>
+    
+    <rect x="700" y="145" width="60" height="8" rx="4" fill="#334155"/>
+    <rect x="700" y="145" width="18" height="8" rx="4" fill="#F59E0B"/>
+    <text x="770" y="152" fill="white" font-family="Arial, sans-serif" font-size="11">Transport 30%</text>
+    
+    <!-- AI Insights -->
+    <rect x="830" y="0" width="200" height="200" rx="10" fill="#1E293B" opacity="0.8"/>
+    <text x="930" y="30" text-anchor="middle" fill="#8B5CF6" font-family="Arial, sans-serif" font-size="16" font-weight="bold">AI Insights</text>
+    
+    <!-- AI Icon -->
+    <circle cx="930" cy="70" r="20" fill="#8B5CF6" opacity="0.2"/>
+    <text x="930" y="78" text-anchor="middle" fill="#8B5CF6" font-family="Arial, sans-serif" font-size="20" font-weight="bold">🤖</text>
+    
+    <!-- Insight Text -->
+    <text x="850" y="110" fill="white" font-family="Arial, sans-serif" font-size="11">• Save 15% on dining</text>
+    <text x="850" y="130" fill="white" font-family="Arial, sans-serif" font-size="11">• Emergency fund ready</text>
+    <text x="850" y="150" fill="white" font-family="Arial, sans-serif" font-size="11">• Investment opportunity</text>
+    <text x="850" y="170" fill="white" font-family="Arial, sans-serif" font-size="11">• Budget on track</text>
+  </g>
+  
+  <!-- Logo and Title -->
+  <g transform="translate(60, 60)">
+    <!-- App Icon -->
+    <rect x="0" y="0" width="50" height="50" rx="10" fill="white"/>
+    <text x="25" y="35" text-anchor="middle" fill="#3B82F6" font-family="Arial, sans-serif" font-size="24" font-weight="bold">💰</text>
+    
+    <!-- App Name -->
+    <text x="70" y="20" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="bold">FinTrack</text>
+    <text x="70" y="45" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="18">AI Personal Finance Dashboard</text>
+  </g>
+  
+  <!-- Bottom Tagline -->
+  <text x="600" y="560" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="20" font-weight="500">
+    Transform your financial life with AI-powered insights
+  </text>
+  
+  <!-- URL -->
+  <text x="600" y="585" text-anchor="middle" fill="#94A3B8" font-family="Arial, sans-serif" font-size="14">
+    fintrack.vercel.app
+  </text>
+</svg>

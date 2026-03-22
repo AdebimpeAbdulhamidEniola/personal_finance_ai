@@ -61,7 +61,7 @@ export const SummaryCards = () => {
     {
       title: "Net Savings",
       value: formatCurrency(summary.netSavings),
-      trend: { value: "Target: $5k", label: "Goal reached!", isSpecial: true },
+      trend: { value: "Target: #5k", label: "Goal reached!", isSpecial: true },
       icon: PiggyBank,
       topBorderColor: "border-t-indigo-500",
       iconColors: "text-indigo-600 bg-indigo-100 dark:bg-indigo-900/30",

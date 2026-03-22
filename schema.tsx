@@ -69,3 +69,28 @@ export const signUpSchema = z.object({
 export type LogInData = z.infer<typeof logInSchema>;
 export type SignUpData = z.infer<typeof signUpSchema>;
 
+// AI Insights and Budget Types
+export interface AIInsightsResponse {
+  status: string;
+  message: string;
+  data: {
+    summary: string;
+    tips: string[];
+  };
+}
+
+export interface BudgetRecommendation {
+  category: string;
+  suggestedLimit: number;
+  reason: string;
+}
+
+export interface BudgetResponse {
+  status: string;
+  message: string;
+  data: {
+    totalBudget: number;
+    recommendations: BudgetRecommendation[];
+  };
+}
+
